@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "mega_store",
+    "slug": "mega_store",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "mega_store"
+}
