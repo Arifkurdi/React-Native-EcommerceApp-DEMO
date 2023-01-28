@@ -4,16 +4,29 @@ import FeaturesNav from "../components/navs/FeaturesNav";
 import FeaturesProducts from "../components/products/FeaturesProducts";
 
 const Features = () => {
-  const [data, setData] = useState("");
+  const [navName, setNavName] = useState("bestSeller");
 
-  function sendData(data) {
-    return setData(data);
+  function setActiveNavName(navName) {
+    return setNavName(navName);
+  }
+
+  function displayNavProducts() {
+    switch (navName) {
+      case "bestSeller":
+        return <FeaturesProducts nav="bestSeller" />;
+
+      case "newest":
+        return <FeaturesProducts nav="newest" />;
+
+      case "sheepest":
+        return <FeaturesProducts nav="sheepest" />;
+    }
   }
 
   return (
     <View>
-      <FeaturesNav sendData={sendData} />
-      <FeaturesProducts />
+      <FeaturesNav setActiveNavName={setActiveNavName} />
+      {displayNavProducts()}
     </View>
   );
 };

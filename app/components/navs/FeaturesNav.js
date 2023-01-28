@@ -9,7 +9,7 @@ import {
 import { colorsStyles } from "../../styles/colors";
 import { Text } from "react-native-paper";
 
-const FeaturesNav = ({ sendData }) => {
+const FeaturesNav = ({ setActiveNavName }) => {
   const [active, setActive] = useState(true);
   const [active2, setActive2] = useState(false);
   const [active3, setActive3] = useState(false);
@@ -19,17 +19,17 @@ const FeaturesNav = ({ sendData }) => {
       setActive(true);
       setActive2(false);
       setActive3(false);
-      sendData("first");
+      setActiveNavName("bestSeller");
     } else if (order == "secound") {
       setActive2(true);
       setActive(false);
       setActive3(false);
-      sendData("secound");
+      setActiveNavName("newest");
     } else {
       setActive3(true);
       setActive(false);
       setActive2(false);
-      sendData("third");
+      setActiveNavName("sheepest");
     }
   }
   return (
