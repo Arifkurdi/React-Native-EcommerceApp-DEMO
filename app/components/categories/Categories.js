@@ -8,7 +8,7 @@ const Categories = () => {
     <View
       style={{
         display: "flex",
-        padding: "10px",
+        padding: "20px",
         overflow: "scroll",
         backgroundColor: colorsStyles.main_white.backgroundColor,
       }}
